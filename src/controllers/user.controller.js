@@ -27,20 +27,23 @@ export default class UserController {
         errorMessage: 'Invalid Credentials',
       });
     }
-    req.session.userEmail=email;
+    req.session.userEmail = email;
     var products = ProductModel.getAll();
-    res.render('index', { products, userEmail: req.session.userEmail });
+    res.render('index', {
+      products,
+      userEmail: req.session.userEmail,
+    });
   }
 
-  logout(req, res){
+  logout(req, res) {
     // on logout, destroy the session
-    req.session.destroy((err)=>{
-      if(err){
+    req.session.destroy((err) => {
+      if (err) {
         console.log(err);
-      }
-      else{
+      } else {
         res.redirect('/login');
       }
     });
+    res.clearCookie('lastVisit');
   }
 }
