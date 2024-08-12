@@ -1,0 +1,37 @@
+/* new-product.css */
+
+
+.container {
+    max-width: 600px;
+    margin-top: 50px;
+    padding: 30px;
+    background-color: linear-gradient(to right, #ff9a9e 0%, #fad0c4 100%);
+    color: #333;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    text-align: center;
+    color: #555;
+}
+
+.form-control {
+    border-radius: 5px;
+    border-color: #ced4da;
+}
+
+.btn-primary {
+    background-color: #28a745;
+    border-color: #28a745;
+}
+
+.btn-primary:hover {
+    background-color: #218838;
+    border-color: #1e7e34;
+}
+
+.alert {
+    margin-bottom: 20px;
+}
